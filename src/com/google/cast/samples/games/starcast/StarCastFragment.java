@@ -77,6 +77,7 @@ public class StarCastFragment extends Fragment {
         } catch (JSONException e) {
             Log.e(TAG, "Error creating JSON direction message", e);
         }
+        Log.i(TAG, "JSON message"  + directionMessage.toString());
         return directionMessage;
     }
 }
