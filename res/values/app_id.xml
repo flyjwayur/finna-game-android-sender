@@ -14,8 +14,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 70668FEA
+<string name="app_id">70668FEA</string>
+<string name="app_id">EFB4E08B</string>
 <string name="app_id">54E247D6</string>
 -->
 <resources>
-    <string name="app_id">EFB4E08B</string>
+    <string name="app_id">70668FEA</string>
 </resources>
