@@ -38,10 +38,13 @@ public class StarCastFragment extends Fragment {
     public static final String MESSAGE_RIGHT = "RIGHT";
     private static final String MESSAGE_FIELD_DIRECTION = "direction";
 
+    public static final String MESSAGE_DIAGONAL_FLIP = "FLIP";
+
     private Button upButton;
     private Button downButton;
     private Button leftButton;
     private Button rightButton;
+    private Button diagonalFlipButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,7 +56,7 @@ public class StarCastFragment extends Fragment {
         downButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_down), MESSAGE_DOWN);
         leftButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_left), MESSAGE_LEFT);
         rightButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_right), MESSAGE_RIGHT);
-
+        diagonalFlipButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_diagonal_flip), MESSAGE_DIAGONAL_FLIP);
         return view;
     }
 
