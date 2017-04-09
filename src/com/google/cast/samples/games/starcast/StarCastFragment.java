@@ -31,22 +31,13 @@ import org.json.JSONObject;
 public class StarCastFragment extends Fragment {
     private static final String TAG = "StarCastFragment";
 
-    //public static final int MESSAGE_TYPE_DIRECTION = 1;
     public static final int MESSAGE_TYPE_CONTROLBUTTONS = 1;
-    public static final String MESSAGE_UP = "UP";
-    public static final String MESSAGE_DOWN = "DOWN";
-    public static final String MESSAGE_LEFT = "LEFT";
-    public static final String MESSAGE_RIGHT = "RIGHT";
-    //private static final String MESSAGE_FIELD_DIRECTION = "direction";
+    public static final String MESSAGE_DIAGONAL_FLIP = "DIAGONAL";
+    public static final String MESSAGE_ROW = "ROW";
+    public static final String MESSAGE_COL = "COL";
+    private static final String MESSAGE_FIELD_ROW_OR_COL = "rowOrCol";
+    private static final String MESSAGE_FIELD_NUM_ROW_OR_COL = "numRowOrCol";
 
-    public static final String MESSAGE_DIAGONAL_FLIP = "FLIP";
-    public static final String MESSAGE_FIRST_ROW = "FIRSTROW";
-    private static final String MESSAGE_FIELD_CONTROLBUTTONS = "controlButton";
-
-    private Button upButton;
-    private Button downButton;
-    private Button leftButton;
-    private Button rightButton;
     private Button diagonalFlipButton;
     private Button firstRowButton;
 
@@ -55,33 +46,32 @@ public class StarCastFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.button_control, container, false);
-
-       /* upButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_up), MESSAGE_UP);
-        downButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_down), MESSAGE_DOWN);
-        leftButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_left), MESSAGE_LEFT);
-        rightButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_right), MESSAGE_RIGHT);
-        diagonalFlipButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_diagonal_flip), MESSAGE_DIAGONAL_FLIP);*/
-        firstRowButton = ButtonWithClickListener((Button) view.findViewById(R.id.rowBtn1), MESSAGE_FIRST_ROW);
+        diagonalFlipButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_diagonal_flip),
+                MESSAGE_DIAGONAL_FLIP, 0);
+        firstRowButton = ButtonWithClickListener((Button) view.findViewById(R.id.rowBtn1),
+                MESSAGE_ROW, 0);
         return view;
     }
 
-    private Button ButtonWithClickListener(Button button, final String controlButton) {
+    private Button ButtonWithClickListener(Button button, final String rowOrCol, final int numOfRowOrCol) {
         button.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 StarcastApplication.getInstance().getSendMessageHandler().enqueueMessage(
-                        MESSAGE_TYPE_CONTROLBUTTONS, createControlButtonsMessage(controlButton));
+                        MESSAGE_TYPE_CONTROLBUTTONS,
+                        createControlButtonsMessage(rowOrCol, numOfRowOrCol));
             }
 
         });
         return button;
     }
 
-    public static JSONObject createControlButtonsMessage(String controlButton) {
+    public static JSONObject createControlButtonsMessage(String rowOrCol, int numOfRowOrCol) {
         JSONObject controlButtonsMessage = new JSONObject();
         try {
-            controlButtonsMessage.put(MESSAGE_FIELD_CONTROLBUTTONS, controlButton);
+            controlButtonsMessage.put(MESSAGE_FIELD_ROW_OR_COL, rowOrCol);
+            controlButtonsMessage.put(MESSAGE_FIELD_NUM_ROW_OR_COL, numOfRowOrCol);
         } catch (JSONException e) {
             Log.e(TAG, "Error creating JSON direction message", e);
         }
@@ -89,4 +79,3 @@ public class StarCastFragment extends Fragment {
         return controlButtonsMessage;
     }
 }
-
