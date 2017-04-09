@@ -40,16 +40,50 @@ public class StarCastFragment extends Fragment {
 
     private Button diagonalFlipButton;
     private Button firstRowButton;
+    private Button firstColButton;
+    private Button secondRowButton;
+    private Button secondColButton;
+    private Button thirdRowButton;
+    private Button thirdColButton;
+    private Button fourthRowButton;
+    private Button fourthColButton;
+    private Button fifthRowButton;
+    private Button fifthColButton;
+    private Button sixthRowButton;
+    private Button sixthColButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.button_control, container, false);
-        diagonalFlipButton = ButtonWithClickListener((Button) view.findViewById(R.id.button_diagonal_flip),
+        diagonalFlipButton = ButtonWithClickListener((Button) view.findViewById(R.id.Diagonal),
                 MESSAGE_DIAGONAL_FLIP, 0);
         firstRowButton = ButtonWithClickListener((Button) view.findViewById(R.id.rowBtn1),
                 MESSAGE_ROW, 0);
+        secondRowButton = ButtonWithClickListener((Button) view.findViewById(R.id.rowBtn2),
+                MESSAGE_ROW, 1);
+        thirdRowButton = ButtonWithClickListener((Button) view.findViewById(R.id.rowBtn3),
+                MESSAGE_ROW, 2);
+        fourthRowButton = ButtonWithClickListener((Button) view.findViewById(R.id.rowBtn4),
+                MESSAGE_ROW, 3);
+        fifthRowButton = ButtonWithClickListener((Button) view.findViewById(R.id.rowBtn5),
+                MESSAGE_ROW, 4);
+        sixthRowButton = ButtonWithClickListener((Button) view.findViewById(R.id.rowBtn6),
+                MESSAGE_ROW, 5);
+        firstColButton = ButtonWithClickListener((Button) view.findViewById(R.id.colBtn1),
+                MESSAGE_COL, 0);
+        secondColButton = ButtonWithClickListener((Button) view.findViewById(R.id.colBtn2),
+                MESSAGE_COL, 1);
+        thirdColButton = ButtonWithClickListener((Button) view.findViewById(R.id.colBtn3),
+                MESSAGE_COL, 2);
+        fourthColButton = ButtonWithClickListener((Button) view.findViewById(R.id.colBtn4),
+                MESSAGE_COL, 3);
+        fifthColButton = ButtonWithClickListener((Button) view.findViewById(R.id.colBtn5),
+                MESSAGE_COL, 4);
+        sixthColButton = ButtonWithClickListener((Button) view.findViewById(R.id.colBtn6),
+                MESSAGE_COL, 5);
+
         return view;
     }
 
