@@ -15,40 +15,46 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/rowBtn1"
                 android:layout_width="55dp"
-                android:layout_height="51dp"
-                android:text="Button" />
+                android:layout_height="45dp"
+                android:text="rowBtn1" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/rowBtn2"
                 android:layout_width="55dp"
-                android:layout_height="51dp"
-                android:text="Button" />
+                android:layout_height="45dp"
+                android:text="rowBtn2" />
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/rowBtn3"
                 android:layout_width="55dp"
-                android:layout_height="51dp"
-                android:text="Button" />
+                android:layout_height="45dp"
+                android:text="rowBtn3" />
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/rowBtn4"
                 android:layout_width="55dp"
-                android:layout_height="51dp"
-                android:text="Button" />
+                android:layout_height="45dp"
+                android:text="rowBtn4" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/rowBtn5"
                 android:layout_width="55dp"
-                android:layout_height="51dp"
-                android:text="Button" />
+                android:layout_height="45dp"
+                android:text="rowBtn5" />
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/rowBtn6"
                 android:layout_width="55dp"
-                android:layout_height="51dp"
-                android:text="Button" />
+                android:layout_height="45dp"
+                android:text="rowBtn6" />
+
+            <Button
+                android:id="@+id/Diagonal"
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:text="Diagonal" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,40 +80,40 @@
 
 
                     <Button
-                        android:id="@+id/button1"
+                        android:id="@+id/colBtn1"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:text="Button" />
+                        android:text="colBtn1" />
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/colBtn2"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:text="Button" />
+                        android:text="colBtn2" />
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/colBtn3"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:text="Button" />
+                        android:text="colBtn3" />
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/colBtn4"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:text="Button" />
+                        android:text="colBtn4" />
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/colBtn5"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:text="Button" />
+                        android:text="colBtn5" />
 
                     <Button
-                        android:id="@+id/button16"
+                        android:id="@+id/colBtn6"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:text="Button" />
+                        android:text="colBtn6" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -142,13 +148,13 @@
                     android:id="@+id/button17"
                     android:layout_width="wrap_content"
                     android:layout_height="55dp"
-                    android:text="Button" />
+                    android:text="Home" />
 
                 <Button
                     android:id="@+id/button18"
                     android:layout_width="wrap_content"
                     android:layout_height="55dp"
-                    android:text="Button" />
+                    android:text="Quit" />
 
             </LinearLayout>
 
